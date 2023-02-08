@@ -7,7 +7,7 @@ public class Main {
 //        This program is coded to take custom quizzes when connected with Database
 //        Since there is no database connectivity at this point, questions and answers are hardcoded with the
 //        help of function ```hardcodeQuestions``` and ```hardcodeOptions```
-//        Further advancement of this project can be tracked with the following repository
+//        Further advancement of this project can be tracked with the following repository: https://github.com/shouryam-kumar/Java-cli-quiz
 
         ArrayList <String> questions = new ArrayList<>();
         ArrayList <String> options = new ArrayList<>();
@@ -126,13 +126,31 @@ public class Main {
 
         }
 
+        System.out.println("------------------------------YOUR RESULT---------------------------------------");
+        System.out.print("MARKS\t\t\t\t\t\t\t\tPercentage\n");
+        System.out.println("--------------------------------------------------------------------------------");
+        if(score==0) {
+            System.out.println(score + " out of 10\t\t\t\t\t\t\t" + score+ "%");
+        } else{
+            System.out.println(score + " out of 10\t\t\t\t\t\t" + score+ "%");
+        }
+
+
+
         scores.add(score);
     }
 
     static void viewScores(ArrayList <Integer> scores) {
+        System.out.println("------------------------------YOUR RESULT---------------------------------------");
+        System.out.print("MARKS\t\t\t\t\t\t\t\tPercentage\n");
+        System.out.println("--------------------------------------------------------------------------------");
         for (int score:
              scores) {
-            System.out.println(score);
+            if(score==0) {
+                System.out.println(score + " out of 10\t\t\t\t\t\t\t" + score+ "%");
+            } else{
+                System.out.println(score + " out of 10\t\t\t\t\t\t" + score+ "%");
+            }
         }
     }
 
